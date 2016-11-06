@@ -9039,8 +9039,7 @@ Parser<ParseHandler>::propertyName(YieldHandling yieldHandling, Node propList,
       }
 
       default:
-         report(ParseError, false, null(), JSMSG_UNEXPECTED_TOKEN,
-               "property name", TokenKindToDesc(ltok));
+        report(ParseError, false, null(), JSMSG_BAD_PROP_ID);
         return null();
     }
 
